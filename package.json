@@ -1,6 +1,6 @@
 {
-  "name": "ngx-emoji-mart",
-  "version": "0.0.1",
+  "name": "ngx-emoji-picker",
+  "version": "0.0.2",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
