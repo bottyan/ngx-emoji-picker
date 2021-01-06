@@ -69,6 +69,8 @@ export class EmojiPickerComponent {
 
     const targetBorders = target.nativeElement.getBoundingClientRect(),
       thisBorders = this._el.nativeElement.getBoundingClientRect();
+      
+    console.log("PLACING DEBUG: ", targetBorders, thisBorders);
 
     let heightCorrection = 0,
       widthCorrection = 0;
@@ -94,7 +96,8 @@ export class EmojiPickerComponent {
     /** Setting up relative positioning for all cases */
     switch (this._currentDirection) {
       case DIRECTIONS.top:
-        heightCorrection = targetBorders.top - thisBorders.bottom;
+        heightCorrection = targetBorders.top - thisBorders.bottom - 32;
+        widthCorrection = targetBorders.left - thisBorders.right;
         break;
       case DIRECTIONS.left:
         widthCorrection = targetBorders.left - thisBorders.right;
